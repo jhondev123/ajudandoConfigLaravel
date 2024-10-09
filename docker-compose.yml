@@ -22,6 +22,16 @@ services:
     restart: always
     ports:
       - "80:80"
+    volumes:
+      - ./teste/app:/var/www/html/app
+      - ./teste/bootstrap:/var/www/html/bootstrap
+      - ./teste/config:/var/www/html/config
+      - ./teste/database:/var/www/html/database
+      - ./teste/public:/var/www/html/public
+      - ./teste/resources:/var/www/html/resources
+      - ./teste/routes:/var/www/html/routes
+      - ./teste/tests:/var/www/html/tests
+
     depends_on:
       - db
  
